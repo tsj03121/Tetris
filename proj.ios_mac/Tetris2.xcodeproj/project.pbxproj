@@ -55,6 +55,8 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		FC595F9824F5100B003F6E2F /* NodeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC595F9724F5100B003F6E2F /* NodeFactory.cpp */; };
+		FC595F9924F5100B003F6E2F /* NodeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC595F9724F5100B003F6E2F /* NodeFactory.cpp */; };
 		FCCEE15A24EF4D340076C228 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCEE15724EF4D330076C228 /* white.png */; };
 		FCCEE15B24EF4D340076C228 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCEE15724EF4D330076C228 /* white.png */; };
 		FCCEE15C24EF4D340076C228 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCEE15924EF4D330076C228 /* red.png */; };
@@ -168,6 +170,8 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		FC595F9524F50FFE003F6E2F /* NodeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeFactory.h; sourceTree = "<group>"; };
+		FC595F9724F5100B003F6E2F /* NodeFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NodeFactory.cpp; sourceTree = "<group>"; };
 		FCCEE15724EF4D330076C228 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		FCCEE15924EF4D330076C228 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		FCE1299224F4F219007B768D /* EventLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventLayer.h; sourceTree = "<group>"; };
@@ -341,6 +345,8 @@
 				FCE1299324F4F224007B768D /* EventLayer.cpp */,
 				FCF2442424F34AE600641E0E /* MyCTR.h */,
 				FCF2442524F34AF500641E0E /* MyCTR.cpp */,
+				FC595F9524F50FFE003F6E2F /* NodeFactory.h */,
+				FC595F9724F5100B003F6E2F /* NodeFactory.cpp */,
 				FCF2442824F34B5000641E0E /* MyNode.h */,
 				FCF2442D24F34B6B00641E0E /* MyNode.cpp */,
 				FCF2443224F34C1C00641E0E /* Node_T.h */,
@@ -525,6 +531,7 @@
 				1AF87B8B1F6F782A007BE51C /* RootViewController.mm in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				FCF2444424F34CA700641E0E /* Node_S.cpp in Sources */,
+				FC595F9824F5100B003F6E2F /* NodeFactory.cpp in Sources */,
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,
 				FCF2443E24F34C8E00641E0E /* Node_J.cpp in Sources */,
 				FCF2444124F34C9E00641E0E /* Node_Z.cpp in Sources */,
@@ -553,6 +560,7 @@
 				FCF2442324F3442700641E0E /* GameLayer.cpp in Sources */,
 				FCF2442724F34AF500641E0E /* MyCTR.cpp in Sources */,
 				FCF2444224F34C9E00641E0E /* Node_Z.cpp in Sources */,
+				FC595F9924F5100B003F6E2F /* NodeFactory.cpp in Sources */,
 				FCF2444824F34CAF00641E0E /* Node_L.cpp in Sources */,
 				FCF2442F24F34B6B00641E0E /* MyNode.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,

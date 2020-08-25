@@ -40,86 +40,26 @@ void EventLayer::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::
     {
         case cocos2d::EventKeyboard::KeyCode::KEY_1:
         {
-            auto layer = (GameLayer*)getChildByName("Stage1");
-            if(layer != nullptr)
-            {
-                layer->setVisible(true);
-            }
-            layer = (GameLayer*)getChildByName("Stage2");
-            if(layer != nullptr)
-            {
-                layer->setVisible(false);
-            }
-            layer = (GameLayer*)getChildByName("Stage3");
-            if(layer != nullptr)
-            {
-                layer->setVisible(false);
-            }
-            
-            layer = (GameLayer*)getChildByName("Stage1");
-            if(layer == nullptr)
-            {
-                GameLayer* pLayer = GameLayer::createLayer();
-                pLayer->UI_StageName(1);
-                addChild(pLayer,1,"Stage1");
-                return;
-            }
+            this->removeAllChildren();
+            auto pLayer = GameLayer::createLayer();
+            pLayer->UI_StageName(1);
+            addChild(pLayer,1,"Stage1");
             break;
         }
         case cocos2d::EventKeyboard::KeyCode::KEY_2:
         {
-            auto layer = (GameLayer*)getChildByName("Stage1");
-            if(layer != nullptr)
-            {
-                layer->setVisible(false);
-            }
-            layer = (GameLayer*)getChildByName("Stage2");
-            if(layer != nullptr)
-            {
-                layer->setVisible(true);
-            }
-            layer = (GameLayer*)getChildByName("Stage3");
-            if(layer != nullptr)
-            {
-                layer->setVisible(false);
-            }
-            
-            layer = (GameLayer*)getChildByName("Stage2");
-            if(layer == nullptr)
-            {
-                GameLayer* pLayer = GameLayer::createLayer();
-                pLayer->UI_StageName(2);
-                addChild(pLayer,1,"Stage2");
-                return;
-            }
+            this->removeAllChildren();
+            auto pLayer = GameLayer::createLayer();
+            pLayer->UI_StageName(2);
+            addChild(pLayer,1,"Stage2");
             break;
         }
         case cocos2d::EventKeyboard::KeyCode::KEY_3:
         {
-            auto layer = (GameLayer*)getChildByName("Stage1");
-            if(layer != nullptr)
-            {
-                layer->setVisible(false);
-            }
-            layer = (GameLayer*)getChildByName("Stage2");
-            if(layer != nullptr)
-            {
-                layer->setVisible(false);
-            }
-            layer = (GameLayer*)getChildByName("Stage3");
-            if(layer != nullptr)
-            {
-                layer->setVisible(true);
-            }
-            
-            layer = (GameLayer*)getChildByName("Stage3");
-            if(layer == nullptr)
-            {
-                GameLayer* pLayer = GameLayer::createLayer();
-                pLayer->UI_StageName(3);
-                addChild(pLayer,1,"Stage3");
-                return;
-            }
+            this->removeAllChildren();
+            auto pLayer = GameLayer::createLayer();
+            pLayer->UI_StageName(3);
+            addChild(pLayer,1,"Stage3");
             break;
         }
     }
