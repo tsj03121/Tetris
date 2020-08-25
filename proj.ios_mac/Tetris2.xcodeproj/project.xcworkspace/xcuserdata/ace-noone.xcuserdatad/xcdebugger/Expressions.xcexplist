@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "HelloWorld::GameStageUP():HelloWorldScene.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "pNewGrid_[0][0]">
+            </PersistentString>
+            <PersistentString
+               value = "pNewGrid_[20][10]">
+            </PersistentString>
+            <PersistentString
+               value = "pNewGrid_[19][10]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GameLayer::RandomNodeCreate():GameLayer.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "HelloWorld::DownSchedule(float):HelloWorldScene.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "GameLayer::LineClear():GameLayer.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "grid_[0][0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MyNode::MyNode(int, int):MyNode.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "pMyNodeLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "cocos2d::LayerColor::onDraw(cocos2d::Mat4 const&amp;, unsigned int):CCLayer.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Node_I::posSetting():Node_I.cpp">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
