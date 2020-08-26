@@ -63,7 +63,7 @@ bool HelloWorld::init()
     }
     
     EventLayer* pEventLayer = EventLayer::createLayer();
-    addChild(pEventLayer, -2);
+    addChild(pEventLayer, -1);
     
     return true;
 }

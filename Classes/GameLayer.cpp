@@ -67,11 +67,6 @@ bool GameLayer::init()
     addChild(pNextBorder2_);
     
     RandomNodeCreate();
-    
-    auto K_listenr = EventListenerKeyboard::create();
-    K_listenr->onKeyPressed = CC_CALLBACK_2(::GameLayer::onKeyPressed, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(K_listenr, this);
-    
     return true;
 }
 
@@ -86,62 +81,6 @@ void GameLayer::UI_StageName(int i)
     addChild(pStageName_);
 }
 
-void GameLayer::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
-{
-    switch (keyCode)
-    {
-        case cocos2d::EventKeyboard::KeyCode::KEY_LEFT_ARROW:
-        {
-            pMyCTR_->MoveLeft(pMyNode_);
-            break;
-        }
-            
-        case cocos2d::EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
-        {
-            pMyCTR_->MoveRight(pMyNode_);
-            break;
-        }
-            
-        case cocos2d::EventKeyboard::KeyCode::KEY_UP_ARROW:
-        {
-            pMyCTR_->MoveUp(pMyNode_);
-            break;
-        }
-            
-        case cocos2d::EventKeyboard::KeyCode::KEY_DOWN_ARROW:
-        {
-            pMyCTR_->MoveDown(pMyNode_);
-            break;
-        }
-            
-        case cocos2d::EventKeyboard::KeyCode::KEY_SPACE:
-        {
-            pMyCTR_->Rotation(pMyNode_);
-            break;
-        }
-        
-        case cocos2d::EventKeyboard::KeyCode::KEY_ENTER:
-        {
-            pMyCTR_->InputBlock(pMyNode_, grid_);
-            GridUpdate();
-            RandomNodeCreate();
-            break;
-        }
-            
-        case cocos2d::EventKeyboard::KeyCode::KEY_P:
-        {
-            if(Director::getInstance()->isPaused())
-            {
-                Director::getInstance()->resume();
-            }
-            else
-            {
-                Director::getInstance()->pause();
-            }
-        }
-    }
-}
-
 //이번 노드 랜덤 생성
 void GameLayer::RandomNodeCreate()
 {
@@ -154,7 +93,7 @@ void GameLayer::RandomNodeCreate()
     
     pMyNode_ = typeNodeFactory.createNode(pNextMyNode_->nodeType_);
     pMyCTR_->nodeType_ = pNextMyNode_->nodeType_;
-    addChild(pMyNode_->getNodeLayer(),5, "pMyNode");
+    addChild(pMyNode_->getNodeLayer(),1, "pMyNode");
     
     NextNode();
 }

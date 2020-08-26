@@ -19,7 +19,8 @@ MyNode* TypeNodeFactory::createNode(char type)
 {
     MyNode* node = nullptr;
     
-    switch (type) {
+    switch (type)
+    {
         case '0':
         case 'I':
             return new Node_I(5,18);

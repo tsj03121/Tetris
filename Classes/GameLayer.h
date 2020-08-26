@@ -34,8 +34,7 @@ public:
     static GameLayer* createLayer();
     
     virtual bool init();
-    virtual void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
-    
+
     // implement the "static create()" method manually
     CREATE_FUNC(GameLayer);
 public:

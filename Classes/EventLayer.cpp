@@ -36,32 +36,87 @@ bool EventLayer::init()
 
 void EventLayer::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
 {
+    GameLayer* gameLayer = (GameLayer*) getParent()->getChildByName("Stage");
     switch (keyCode)
     {
         case cocos2d::EventKeyboard::KeyCode::KEY_1:
         {
-            this->removeAllChildren();
+            getParent()->removeChildByName("Stage");
             auto pLayer = GameLayer::createLayer();
             pLayer->UI_StageName(1);
-            addChild(pLayer,1,"Stage1");
+            getParent()->addChild(pLayer,1,"Stage");
             break;
         }
         case cocos2d::EventKeyboard::KeyCode::KEY_2:
         {
-            this->removeAllChildren();
+            getParent()->removeChildByName("Stage");
             auto pLayer = GameLayer::createLayer();
             pLayer->UI_StageName(2);
-            addChild(pLayer,1,"Stage2");
+            getParent()->addChild(pLayer,1,"Stage");
             break;
         }
         case cocos2d::EventKeyboard::KeyCode::KEY_3:
         {
-            this->removeAllChildren();
+            getParent()->removeChildByName("Stage");
             auto pLayer = GameLayer::createLayer();
             pLayer->UI_StageName(3);
-            addChild(pLayer,1,"Stage3");
+            getParent()->addChild(pLayer,1,"Stage");
             break;
         }
-    }
-    
+        case cocos2d::EventKeyboard::KeyCode::KEY_LEFT_ARROW:
+        {
+            if(gameLayer == nullptr)
+                return;
+            
+            gameLayer->pMyCTR_->MoveLeft(gameLayer->pMyNode_);
+            break;
+        }
+            
+        case cocos2d::EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
+        {
+            if(gameLayer == nullptr)
+                return;
+            
+            gameLayer->pMyCTR_->MoveRight(gameLayer->pMyNode_);
+            break;
+        }
+            
+        case cocos2d::EventKeyboard::KeyCode::KEY_UP_ARROW:
+        {
+            if(gameLayer == nullptr)
+                return;
+             
+            gameLayer->pMyCTR_->MoveUp(gameLayer->pMyNode_);
+            break;
+        }
+            
+        case cocos2d::EventKeyboard::KeyCode::KEY_DOWN_ARROW:
+        {
+            if(gameLayer == nullptr)
+                return;
+            
+            gameLayer->pMyCTR_->MoveDown(gameLayer->pMyNode_);
+            break;
+        }
+            
+        case cocos2d::EventKeyboard::KeyCode::KEY_SPACE:
+        {
+            if(gameLayer == nullptr)
+                return;
+            
+            gameLayer->pMyCTR_->Rotation(gameLayer->pMyNode_);
+            break;
+        }
+        
+        case cocos2d::EventKeyboard::KeyCode::KEY_ENTER:
+        {
+            if(gameLayer == nullptr)
+                return;
+            
+            gameLayer->pMyCTR_->InputBlock(gameLayer->pMyNode_, gameLayer->grid_);
+            gameLayer->GridUpdate();
+            gameLayer->RandomNodeCreate();
+            break;
+        }
+    }   
 }

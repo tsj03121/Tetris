@@ -77,10 +77,12 @@ void MyCTR::InputBlock(MyNode* node, int grid[20][10])
         return;
     
     node->pMyNodeLayer_->removeAllChildren();
-
+    
+    //노드 타입기준
     switch (node->nodeType_) {
         case 'I':
         {
+            //노드 회전 수
              switch (node->rotation_)
              {
                  case 0:
@@ -350,17 +352,17 @@ bool MyCTR::isMove(MyNode* node, char type)
 
         if(x <= 0 && type == 'L')
             return false;
-        if(x >= 250 && type == 'R')
+        if(x >= 270 && type == 'R')
             return false;
         if(y <= 0 && type == 'D')
             return false;
-        if(y >= 550 && type == 'U')
+        if(y >= 570 && type == 'U')
             return false;
     }
     return true;
 }
 
-//어디 까지 블럭이 내려갈 수 있는지 체크
+//어디 까지 블럭이 내려갈 수 있는지 체크 (Hard Drop)
 bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
 {
     //노드 타입이 무엇이냐
@@ -385,7 +387,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                             return true;
                     }while(node->myY_ >= 3);
                     return true;
-                    break;
                 }
                     
                 case 1:
@@ -422,7 +423,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         
                     }while(node->myY_ >= 1);
                     return true;
-                    break;
                 }
                     
                 case 2:
@@ -439,7 +439,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                             return true;
                     }while(node->myY_ >= 3);
                     return true;
-                    break;
                 }
                 
                 case 3:
@@ -476,7 +475,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         
                     }while(node->myY_ >= 1);
                     return true;
-                    break;
                 }
             }
             break;
@@ -515,7 +513,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         
                     }while(node->myY_ >= 1);
                     return true;
-                    break;
                 }
             }
             break;
@@ -553,7 +550,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 1);
                     return true;
-                    break;
                 }
                 case 1:
                 {
@@ -578,7 +574,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 2:
                 {
@@ -607,7 +602,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 3:
                 {
@@ -632,7 +626,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 
             }
@@ -670,7 +663,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                          node->myY_ -= 1;
                      }while(node->myY_ >= 1);
                      return true;
-                     break;
                 }
                 case 1:
                 {
@@ -694,7 +686,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 2:
                 {
@@ -722,7 +713,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 3:
                 {
@@ -746,7 +736,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
             }
             break;
@@ -782,7 +771,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                          node->myY_ -= 1;
                      }while(node->myY_ >= 1);
                      return true;
-                     break;
                 }
                 case 1:
                 {
@@ -806,7 +794,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 2:
                 {
@@ -834,7 +821,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 3:
                 {
@@ -858,7 +844,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
             }
             break;
@@ -894,7 +879,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                          node->myY_ -= 1;
                      }while(node->myY_ >= 1);
                      return true;
-                     break;
                 }
                 case 1:
                 {
@@ -918,7 +902,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 2:
                 {
@@ -946,7 +929,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 3:
                 {
@@ -970,7 +952,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
             }
             break;
@@ -1006,7 +987,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                          node->myY_ -= 1;
                      }while(node->myY_ >= 1);
                      return true;
-                     break;
                 }
                 case 1:
                 {
@@ -1030,7 +1010,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 2:
                 {
@@ -1058,7 +1037,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
                 case 3:
                 {
@@ -1082,7 +1060,6 @@ bool MyCTR::isInputBlockCheck(MyNode* node, int grid[20][10])
                         node->myY_ -= 1;
                     }while(node->myY_ >= 2);
                     return true;
-                    break;
                 }
             }
             break;
