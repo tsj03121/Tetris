@@ -10,9 +10,7 @@
 
 
 class EventLayer : public cocos2d::Layer
-{
-public:
-
+{   
 public:
     static EventLayer* createLayer();
     

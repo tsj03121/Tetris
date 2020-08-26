@@ -13,6 +13,7 @@ USING_NS_CC;
 Node_O::Node_O(int x, int y)
 : MyNode(x, y)
 {
+    nodeType_ = 'O';
     RotSetting();
 }
 
@@ -24,7 +25,10 @@ Layer* Node_O::getNodeLayer()
 //블록 회전 경우의 수
 void Node_O::RotSetting()
 {
-    pMyNodeLayer_->removeAllChildren();
+    if(pMyNodeLayer_->getChildrenCount() != 0)
+    {
+        pMyNodeLayer_->removeAllChildren();
+    }
     MyNodeSpriteCreate();
     switch (rotation_)
     {

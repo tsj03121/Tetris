@@ -55,6 +55,8 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		FC379C3824F5E4BF00C09DD0 /* TypeNodeFactroy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC379C3724F5E4BF00C09DD0 /* TypeNodeFactroy.cpp */; };
+		FC379C3924F5E4BF00C09DD0 /* TypeNodeFactroy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC379C3724F5E4BF00C09DD0 /* TypeNodeFactroy.cpp */; };
 		FC595F9824F5100B003F6E2F /* NodeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC595F9724F5100B003F6E2F /* NodeFactory.cpp */; };
 		FC595F9924F5100B003F6E2F /* NodeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC595F9724F5100B003F6E2F /* NodeFactory.cpp */; };
 		FCCEE15A24EF4D340076C228 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCEE15724EF4D330076C228 /* white.png */; };
@@ -170,6 +172,8 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		FC379C3524F5E4B300C09DD0 /* TypeNodeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeNodeFactory.h; sourceTree = "<group>"; };
+		FC379C3724F5E4BF00C09DD0 /* TypeNodeFactroy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TypeNodeFactroy.cpp; sourceTree = "<group>"; };
 		FC595F9524F50FFE003F6E2F /* NodeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeFactory.h; sourceTree = "<group>"; };
 		FC595F9724F5100B003F6E2F /* NodeFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NodeFactory.cpp; sourceTree = "<group>"; };
 		FCCEE15724EF4D330076C228 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 				FCF2442524F34AF500641E0E /* MyCTR.cpp */,
 				FC595F9524F50FFE003F6E2F /* NodeFactory.h */,
 				FC595F9724F5100B003F6E2F /* NodeFactory.cpp */,
+				FC379C3524F5E4B300C09DD0 /* TypeNodeFactory.h */,
+				FC379C3724F5E4BF00C09DD0 /* TypeNodeFactroy.cpp */,
 				FCF2442824F34B5000641E0E /* MyNode.h */,
 				FCF2442D24F34B6B00641E0E /* MyNode.cpp */,
 				FCF2443224F34C1C00641E0E /* Node_T.h */,
@@ -542,6 +548,7 @@
 				FCF2443824F34C7B00641E0E /* Node_T.cpp in Sources */,
 				FCF2442224F3442700641E0E /* GameLayer.cpp in Sources */,
 				FCE1299424F4F224007B768D /* EventLayer.cpp in Sources */,
+				FC379C3824F5E4BF00C09DD0 /* TypeNodeFactroy.cpp in Sources */,
 				FCF2442E24F34B6B00641E0E /* MyNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +561,7 @@
 				FCF2443F24F34C8E00641E0E /* Node_J.cpp in Sources */,
 				FCF2444F24F34CC300641E0E /* Node_O.cpp in Sources */,
 				FCF2443C24F34C8600641E0E /* Node_I.cpp in Sources */,
+				FC379C3924F5E4BF00C09DD0 /* TypeNodeFactroy.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				FCF2444524F34CA700641E0E /* Node_S.cpp in Sources */,
 				FCE1299524F4F224007B768D /* EventLayer.cpp in Sources */,

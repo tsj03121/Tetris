@@ -15,9 +15,9 @@ class Node_I : public MyNode
 {
     
 public:
-    void RotSetting();
+    virtual void RotSetting() override;
     
-    cocos2d::Layer* getNodeLayer();
+    virtual cocos2d::Layer* getNodeLayer() override;
     
 public:
     Node_I(int x, int y);

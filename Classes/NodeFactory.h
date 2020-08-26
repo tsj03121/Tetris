@@ -7,17 +7,12 @@
 
 #ifndef NodeFactory_h
 #define NodeFactory_h
-#include "MyNode_h"
+#include "MyNode.h"
 
-class NodeFactory : cocos2d::Node
+class NodeFactory
 {
 public:
-    virtual MyNode* createNode(char nodeType);
-
-    
-    
-    
-    
+    virtual MyNode* createNode(char nodeType){};
 };
 
 #endif /* NodeFactory_h */

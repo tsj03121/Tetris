@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include "GameLayer.h"
-#include "MyNode.h"
+#include "TypeNodeFactory.h"
 
 USING_NS_CC;
 
@@ -38,7 +38,6 @@ GameLayer::GameLayer()
 
 GameLayer::~GameLayer()
 {
-
     delete pMyCTR_;
 }
 
@@ -76,6 +75,7 @@ bool GameLayer::init()
     return true;
 }
 
+//스테이지 제목 설정
 void GameLayer::UI_StageName(int i)
 {
     int width = Director::getInstance()->getWinSize().width;
@@ -92,259 +92,37 @@ void GameLayer::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::E
     {
         case cocos2d::EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         {
-            switch (pMyCTR_->nodeType_)
-            {
-                case 'I':
-                {
-                    pMyCTR_->MoveLeft(pNode_I_);
-                    break;
-                }
-                case 'O':
-                {
-                    pMyCTR_->MoveLeft(pNode_O_);
-                    break;
-                }
-                case 'T':
-                {
-                    pMyCTR_->MoveLeft(pNode_T_);
-                    break;
-                }
-                case 'J':
-                {
-                    pMyCTR_->MoveLeft(pNode_J_);
-                    break;
-                }
-                case 'Z':
-                {
-                    pMyCTR_->MoveLeft(pNode_Z_);
-                    break;
-                }
-                case 'S':
-                {
-                    pMyCTR_->MoveLeft(pNode_S_);
-                    break;
-                }
-                case 'L':
-                {
-                    pMyCTR_->MoveLeft(pNode_L_);
-                    break;
-                }
-            }
+            pMyCTR_->MoveLeft(pMyNode_);
             break;
         }
             
         case cocos2d::EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         {
-            switch (pMyCTR_->nodeType_)
-            {
-                case 'I':
-                {
-                    pMyCTR_->MoveRight(pNode_I_);
-                    break;
-                }
-                case 'O':
-                {
-                    pMyCTR_->MoveRight(pNode_O_);
-                    break;
-                }
-                case 'T':
-                {
-                    pMyCTR_->MoveRight(pNode_T_);
-                    break;
-                }
-                case 'J':
-                {
-                    pMyCTR_->MoveRight(pNode_J_);
-                    break;
-                }
-                case 'Z':
-                {
-                    pMyCTR_->MoveRight(pNode_Z_);
-                    break;
-                }
-                case 'S':
-                {
-                    pMyCTR_->MoveRight(pNode_S_);
-                    break;
-                }
-                case 'L':
-                {
-                    pMyCTR_->MoveRight(pNode_L_);
-                    break;
-                }
-                    
-            }
+            pMyCTR_->MoveRight(pMyNode_);
             break;
         }
             
         case cocos2d::EventKeyboard::KeyCode::KEY_UP_ARROW:
         {
-            switch (pMyCTR_->nodeType_) {
-                case 'I':
-                {
-                    pMyCTR_->MoveUp(pNode_I_);
-                    break;
-                }
-                case 'O':
-                {
-                    pMyCTR_->MoveUp(pNode_O_);
-                    break;
-                }
-                case 'T':
-                {
-                    pMyCTR_->MoveUp(pNode_T_);
-                    break;
-                }
-                case 'J':
-                {
-                    pMyCTR_->MoveUp(pNode_J_);
-                    break;
-                }
-                case 'Z':
-                {
-                    pMyCTR_->MoveUp(pNode_Z_);
-                    break;
-                }
-                case 'S':
-                {
-                    pMyCTR_->MoveUp(pNode_S_);
-                    break;
-                }
-                case 'L':
-                {
-                    pMyCTR_->MoveUp(pNode_L_);
-                    break;
-                }
-            }
+            pMyCTR_->MoveUp(pMyNode_);
             break;
         }
             
         case cocos2d::EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         {
-            switch (pMyCTR_->nodeType_)
-            {
-                case 'I':
-                {
-                    pMyCTR_->MoveDown(pNode_I_);
-                    break;
-                }
-                case 'O':
-                {
-                    pMyCTR_->MoveDown(pNode_O_);
-                    break;
-                }
-                case 'T':
-                {
-                    pMyCTR_->MoveDown(pNode_T_);
-                    break;
-                }
-                case 'J':
-                {
-                    pMyCTR_->MoveDown(pNode_J_);
-                    break;
-                }
-                case 'Z':
-                {
-                    pMyCTR_->MoveDown(pNode_Z_);
-                    break;
-                }
-                case 'S':
-                {
-                    pMyCTR_->MoveDown(pNode_S_);
-                    break;
-                }
-                case 'L':
-                {
-                    pMyCTR_->MoveDown(pNode_L_);
-                    break;
-                }
-            }
+            pMyCTR_->MoveDown(pMyNode_);
             break;
         }
             
         case cocos2d::EventKeyboard::KeyCode::KEY_SPACE:
         {
-            switch (pMyCTR_->nodeType_)
-            {
-                case 'I':
-                {
-                    pMyCTR_->Rotation(pNode_I_);
-                    break;
-                }
-                case 'O':
-                {
-                    pMyCTR_->Rotation(pNode_O_);
-                    break;
-                }
-                case 'T':
-                {
-                    pMyCTR_->Rotation(pNode_T_);
-                    break;
-                }
-                case 'J':
-                {
-                    pMyCTR_->Rotation(pNode_J_);
-                    break;
-                }
-                case 'Z':
-                {
-                    pMyCTR_->Rotation(pNode_Z_);
-                    break;
-                }
-                case 'S':
-                {
-                    pMyCTR_->Rotation(pNode_S_);
-                    break;
-                }
-                case 'L':
-                {
-                    pMyCTR_->Rotation(pNode_L_);
-                    break;
-                }
-            }
+            pMyCTR_->Rotation(pMyNode_);
             break;
         }
         
         case cocos2d::EventKeyboard::KeyCode::KEY_ENTER:
         {
-            switch (pMyCTR_->nodeType_)
-            {
-                case 'I':
-                {
-                    pMyCTR_->InputBlock(pNode_I_, grid_);
-                    break;
-                }
-                case 'O':
-                {
-                    pMyCTR_->InputBlock(pNode_O_, grid_);
-                    break;
-                }
-                case 'T':
-                {
-                    pMyCTR_->InputBlock(pNode_T_, grid_);
-                    break;
-                }
-                case 'J':
-                {
-                    pMyCTR_->InputBlock(pNode_J_, grid_);
-                    break;
-                }
-                case 'Z':
-                {
-                    pMyCTR_->InputBlock(pNode_Z_, grid_);
-                    break;
-                }
-                case 'S':
-                {
-                    pMyCTR_->InputBlock(pNode_S_, grid_);
-                    break;
-                }
-                case 'L':
-                {
-                    pMyCTR_->InputBlock(pNode_L_, grid_);
-                    break;
-                }
-            }
+            pMyCTR_->InputBlock(pMyNode_, grid_);
             GridUpdate();
             RandomNodeCreate();
             break;
@@ -364,75 +142,24 @@ void GameLayer::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::E
     }
 }
 
+//이번 노드 랜덤 생성
 void GameLayer::RandomNodeCreate()
 {
+    TypeNodeFactory typeNodeFactory;
+    
     if(pNextMyNode_ == nullptr)
     {
         NextNode();
     }
     
-    switch (pNextMyNode_->nodeType_)
-    {
-        case 'I':
-        {
-            pMyCTR_->nodeType_ = 'I';
-            pNode_I_ = new Node_I(5, 18);
-            pNode_I_->nodeType_ = 'I';
-            addChild(pNode_I_->getNodeLayer(),5);
-            break;
-        }
-        case 'O':
-        {
-            pMyCTR_->nodeType_ = 'O';
-            pNode_O_ = new Node_O(5, 18);
-            pNode_O_->nodeType_ = 'O';
-            addChild(pNode_O_->getNodeLayer(),5);
-            break;
-        }
-        case 'T':
-        {
-            pMyCTR_->nodeType_ = 'T';
-            pNode_T_ = new Node_T(5, 18);
-            pNode_T_->nodeType_ = 'T';
-            addChild(pNode_T_->getNodeLayer(),5);
-            break;
-        }
-        case 'J':
-        {
-            pMyCTR_->nodeType_ = 'J';
-            pNode_J_ = new Node_J(5, 18);
-            pNode_J_->nodeType_ = 'J';
-            addChild(pNode_J_->getNodeLayer(),5);
-            break;
-        }
-        case 'Z':
-        {
-            pMyCTR_->nodeType_ = 'Z';
-            pNode_Z_ = new Node_Z(5, 18);
-            pNode_Z_->nodeType_ = 'Z';
-            addChild(pNode_Z_->getNodeLayer(),5);
-            break;
-        }
-        case 'S':
-        {
-            pMyCTR_->nodeType_ = 'S';
-            pNode_S_ = new Node_S(5, 18);
-            pNode_S_->nodeType_ = 'S';
-            addChild(pNode_S_->getNodeLayer(),5);
-            break;
-        }
-        case 'L':
-        {
-            pMyCTR_->nodeType_ = 'L';
-            pNode_L_ = new Node_L(5, 18);
-            pNode_L_->nodeType_ = 'L';
-            addChild(pNode_L_->getNodeLayer(),5);
-            break;
-        }
-    }
+    pMyNode_ = typeNodeFactory.createNode(pNextMyNode_->nodeType_);
+    pMyCTR_->nodeType_ = pNextMyNode_->nodeType_;
+    addChild(pMyNode_->getNodeLayer(),5, "pMyNode");
+    
     NextNode();
 }
 
+//화면 재구성
 void GameLayer::GridUpdate()
 {
     LineClear();
@@ -494,51 +221,11 @@ void GameLayer::LineClear()
     }
 }
 
+//다음 노드를 생성
 void GameLayer::NextNode()
 {
     int blockRandom = rand() % 7;
-    pNextMyNode_ = new MyNode(5, 18);
-    switch (blockRandom)
-    {
-        case 0:
-        {
-            pNextMyNode_->nodeType_ = 'I';
-//            Sprite* pNextNode = Sprite::create("I.png");
-//            pNextNode->setAnchorPoint(Vec2::ZERO);
-//            pNextNode->setScale(0.2, 0.2);
-//            pNextNode->setPosition(Vec2(100,100));
-//            pNextBorder2_->addChild(pNextNode);
-            break;
-        }
-        case 1:
-        {
-            pNextMyNode_->nodeType_ = 'T';
-            break;
-        }
-        case 2:
-        {
-            pNextMyNode_->nodeType_ = 'O';
-            break;
-        }
-        case 3:
-        {
-            pNextMyNode_->nodeType_ = 'Z';
-            break;
-        }
-        case 4:
-        {
-            pNextMyNode_->nodeType_ = 'S';
-            break;
-        }
-        case 5:
-        {
-            pNextMyNode_->nodeType_ = 'J';
-            break;
-        }
-        case 6:
-        {
-            pNextMyNode_->nodeType_ = 'L';
-            break;
-        }
-    }
+    TypeNodeFactory typeNodeFactory;
+    std::string std = std::to_string(blockRandom);
+    pNextMyNode_ = typeNodeFactory.createNode(std[0]);
 }

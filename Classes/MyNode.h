@@ -23,7 +23,8 @@ public:
     
 public:
     void MyNodeSpriteCreate();
-    void RotSetting();
+    virtual cocos2d::Layer* getNodeLayer(){};
+    virtual void RotSetting(){};
     
 public:
     MyNode(int x, int y);

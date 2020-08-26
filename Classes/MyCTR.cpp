@@ -7,13 +7,6 @@
 
 #include <stdio.h>
 #include "MyCTR.h"
-#include "Node_I.h"
-#include "Node_O.h"
-#include "Node_T.h"
-#include "Node_J.h"
-#include "Node_Z.h"
-#include "Node_S.h"
-#include "Node_L.h"
 
 USING_NS_CC;
 
@@ -29,44 +22,7 @@ MyCTR::~MyCTR()
 }
 void MyCTR::NodePosSetting(MyNode* node)
 {
-    switch (node->nodeType_)
-    {
-        case 'I':
-        {
-            ((Node_I* )node)->RotSetting();
-            break;
-        }
-        case 'O':
-        {
-            ((Node_O* )node)->RotSetting();
-            break;
-        }
-        case 'T':
-        {
-            ((Node_T* )node)->RotSetting();
-            break;
-        }
-        case 'J':
-        {
-            ((Node_J* )node)->RotSetting();
-            break;
-        }
-        case 'Z':
-        {
-            ((Node_Z* )node)->RotSetting();
-            break;
-        }
-        case 'S':
-        {
-            ((Node_S* )node)->RotSetting();
-            break;
-        }
-        case 'L':
-        {
-            ((Node_L* )node)->RotSetting();
-            break;
-        }
-    }
+    node->RotSetting();
 }
 
 void MyCTR::MoveLeft(MyNode* node)

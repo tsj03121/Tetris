@@ -38,8 +38,3 @@ void MyNode::MyNodeSpriteCreate()
         pSprite_[i]->retain();
     }
 }
-
-void MyNode::RotSetting()
-{
-    
-}

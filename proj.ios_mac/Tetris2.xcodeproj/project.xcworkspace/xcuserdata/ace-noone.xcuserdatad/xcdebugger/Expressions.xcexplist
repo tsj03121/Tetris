@@ -3,24 +3,29 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "node-&gt;pSprite_[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "HelloWorld::GameStageUP():HelloWorldScene.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "pNewGrid_[0][0]">
+               value = "pNewGrid_[19][10]">
             </PersistentString>
             <PersistentString
                value = "pNewGrid_[20][10]">
             </PersistentString>
             <PersistentString
-               value = "pNewGrid_[19][10]">
+               value = "pNewGrid_[0][0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "GameLayer::RandomNodeCreate():GameLayer.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "HelloWorld::DownSchedule(float):HelloWorldScene.cpp">
       </ContextState>
       <ContextState
          contextName = "GameLayer::LineClear():GameLayer.cpp">
@@ -29,6 +34,9 @@
                value = "grid_[0][0]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HelloWorld::DownSchedule(float):HelloWorldScene.cpp">
       </ContextState>
       <ContextState
          contextName = "MyNode::MyNode(int, int):MyNode.cpp">
